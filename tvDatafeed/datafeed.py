@@ -54,7 +54,8 @@ class TvDatafeedLive(tvDatafeed.TvDatafeed):
             self._trigger_interrupt=threading.Event()
             
             # time periods available in TradingView 
-            self._timeframes={"1":rd(minutes=1), "3":rd(minutes=3), "5":rd(minutes=5), \
+            self._timeframes={"1s": rd(seconds=1), "3s": rd(seconds=3), "5s": rd(seconds=5),"10s": rd(seconds=10), \
+                             "1":rd(minutes=1), "3":rd(minutes=3), "5":rd(minutes=5), \
                              "15":rd(minutes=15), "30":rd(minutes=30), "45":rd(minutes=45), \
                              "1H":rd(hours=1), "2H":rd(hours=2), "3H":rd(hours=3), "4H":rd(hours=4), \
                              "1D":rd(days=1), "1W":rd(weeks=1), "1M":rd(months=1)}
